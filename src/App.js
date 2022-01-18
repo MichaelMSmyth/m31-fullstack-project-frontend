@@ -1,4 +1,7 @@
 import './App.css';
+import {HomeComp} from './components/home';
+import { LoginComp } from './components/login';
+import { AboutComp } from './components/about';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -8,11 +11,13 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  const [modal,setmodal]= true
   return (
+    <div>
     <Router>
       <div>
         <nav>
-          <ul>
+          <ul className='navbar neumorph card'>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -31,18 +36,22 @@ export default function App() {
         </Routes>
       </div>
     </Router>
+    <div>
+      <Modal/>
+    </div>
+    </div>
   );
 
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (<HomeComp/>);
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (<AboutComp/>);
 }
 
 function Login() {
-  return <h2>Login</h2>;
+  return (<LoginComp/>);
 }
