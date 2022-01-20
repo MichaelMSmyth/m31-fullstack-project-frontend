@@ -1,5 +1,6 @@
-import {RiLockPasswordFill} from "react-icons/ri";
-export const HomeComp = ({setUsername,setPassword,signInHandler,PasswordHide}) => {
+import {Link} from "react-router-dom";
+
+export const HomeComp = ({setUsername,setPassword,signInHandler}) => {
     return(
         <div className="home">
             <form onSubmit={() => signInHandler}>
@@ -7,10 +8,10 @@ export const HomeComp = ({setUsername,setPassword,signInHandler,PasswordHide}) =
             <label for="Email">Email</label>
             <input id = "email" onChange={(e) => setUsername(e.target.value)} placeholder="Email"/>
             <label for="password">Password</label>
-            <input id = "password" onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
-            <button type="submit">Sign In</button>
-            <p className="p">New user? create a free account here!</p>
-            <p className="p">Forgotten your password? Click here to reset.</p>
+            <input id = "password" type = "password" onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
+            <button className="btn" type="submit">Sign In</button>
+            <Link className="p" to="/signup"> New user? create a free account here! </Link>
+            <a className="p">Forgotten your password? Click here to reset.</a>
         </form>
         </div>
     )
