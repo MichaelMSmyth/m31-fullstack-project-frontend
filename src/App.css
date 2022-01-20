@@ -4,10 +4,16 @@
     display: flex;
     flex-direction: column;
     font-family: 'Lora', serif;
-    width: 10vw;
-    height: 90vh;
+    width: 8vw;
+    height: 100vh;
     margin: 0px;
+    top: 0;
+    left: 0;
     position: absolute;
+    transition: transform 0.4s ease;
+}
+.navbar:active{
+    transform: translateX(0);
 }
 
 .animationBG{
@@ -21,15 +27,18 @@
 }
 
 a{
+    font-family: 'Poppins',sans-serif;
     display:block;
     padding: 10px;
     color:white;  
     text-decoration:none;
-    font-size: 30px;
+    font-size: 2vw;
+    font-size: 2vh;
 }
 
 a:hover{
     color: black;
+    cursor: pointer;
 }
 
 li{
@@ -62,23 +71,37 @@ body {
 }
 
 .hamburger{
-    font-size: 40px;
-    width: 10vh;
+    font-size: 60px;
+    top: 0;
+    left: 0;
 }
 .hamburger:hover{
     cursor: pointer;
+    transform: scale(0.95);
+}
+.x{
+    font-size: 40px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.x:hover{
+    cursor: pointer;
+    transform: scale(0.95);
 }
 .nodeco{
     padding: 0;
     border: none;
     background: none;
+    box-sizing: border-box;
 }
 
 .home{
     text-align: center;
 }
 
-
+/* form */
 *:before,
 *:after{
     padding: 0;
@@ -164,7 +187,9 @@ input{
 ::placeholder{
     color: #e5e5e5;
 }
-button{
+/* form */
+
+.btn{
     margin-top: 50px;
     width: 100%;
     background-color: #ffffff;
@@ -174,8 +199,18 @@ button{
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+.btn:hover{
+    transform: scale(1.02);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+.btn:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
 .fontChange{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
@@ -185,5 +220,5 @@ button{
 }
 
 .p{
-    font-size: 18px;
+    font-size: 17px;
 }
