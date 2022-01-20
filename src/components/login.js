@@ -1,7 +1,7 @@
 export const LoginComp = () => {
     return(
         <div>
-            <p>Login function</p>
+            <h1>Login Here</h1>
         </div>
     )
 }
