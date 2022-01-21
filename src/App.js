@@ -148,6 +148,7 @@ export default function App() {
     </Router>
     </div>
   );
+
 }
 
 function Home() {
