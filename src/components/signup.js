@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export const SignUp = (setUsername,setPassword,setEmail,signUpHandler) => {
     return(
-        <div className="home">
+        <div className="centerr">
             <form onSubmit={signUpHandler}>
             <h2>Create your Free Account!</h2>
             <input onChange={(e) => setUsername(e.target.value)} placeholder="Username"/>
