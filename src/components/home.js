@@ -1,8 +1,7 @@
 import {Link} from "react-router-dom";
-
 export const HomeComp = ({setUsername,setPassword,signInHandler}) => {
     return(
-        <div className="home">
+        <div className="centerr">
             <form onSubmit={() => signInHandler}>
             <h2>Login Here!</h2>
             <label for="Email">Email</label>
@@ -11,7 +10,7 @@ export const HomeComp = ({setUsername,setPassword,signInHandler}) => {
             <input id = "password" type = "password" onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
             <button className="btn" type="submit">Sign In</button>
             <Link className="p" to="/signup"> New user? create a free account here! </Link>
-            <a className="p">Forgotten your password? Click here to reset.</a>
+            <Link className="p" to="/reset-pass">Forgotten your password? Click here to reset.</Link>
         </form>
         </div>
     )
