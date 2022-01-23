@@ -8,52 +8,51 @@ Todo:
 
 Oh my word. Update Todo with everything to do.
 
-Integrate functionality from root/App.js to rest of code.
-Split out routing to routes/index.js
-Split out and integrate App.js state management into Redux store
-Split out and integrate App.js fetch requests into seperate file. Probably put into utils.
-Restyle all new components to follow glassmorphic UI design
-Add fix for Firefox backdrop-filter to allow glasmorphic blur - https://stackoverflow.com/questions/38145368/css-workaround-to-backdrop-filter
-Fully comment code for team - currently working on reducers - listsReducers.js
-Figure out way to integrate state into backend with Redux OR figure out way to replace Redux entirely
-Remove cdn script tags from public/index.html and integrate fully via packages
-Make and update favicon
-Think of name for app and create a logo
-Write Redux functionality to delete boards
+Integrate functionality from root/App.js to rest of code  
+Split out routing to routes/index.js  
+Split out and integrate App.js state management into Redux store  
+Split out and integrate App.js fetch requests into seperate file. Probably put into utils  
+Restyle all new components to follow glassmorphic UI design  
+Add fix for Firefox backdrop-filter to allow glasmorphic blur - https://stackoverflow.com/questions/38145368/css-workaround-to-backdrop-filter  
+Fully comment code for team - currently working on reducers - listsReducers.js  
+Figure out way to integrate state into backend with Redux OR figure out way to replace Redux entirely  
+Remove cdn script tags from public/index.html and integrate fully via packages  
+Make and update favicon  
+Think of name for app and create a logo  
+Write Redux functionality to delete boards  
 Write Redux functionality to move boards
-
 
 Git:
 
 never write code on the main branch
 
-git branch // to check the current branch
-git checkout -b branchname //to make a new branch
-git add
-git commit -m "meaningful message" // to commit my branch
-git push --set-upstream origin branchname // to push the branch
-create a pull request base:main compare:branchname
-git pull origin main // 
+git branch // to check the current branch  
+git checkout -b branchname //to make a new branch  
+git add  
+git commit -m "meaningful message" // to commit my branch  
+git push --set-upstream origin branchname // to push the branch  
+create a pull request base:main compare:branchname  
+git pull origin main //  
 npm i // will install dependencies
 
 Packages:
 
-"@craco/craco": "^6.4.3", - For accessing Webpack config files to alias Material UI to work with styled-components
-"@mui/material": "^5.3.0", - Material UI package that contains components to use
-"@mui/styled-engine-sc": "^5.3.0", - The styled-components engine for Material UI
-"bootstrap": "^5.1.3", - UI framework
-"react": "^17.0.2", - Virtual DOM framework
-"react-beautiful-dnd": "^13.1.0", - Dragging and dropping components
-"react-dom": "^17.0.2", - React DOM methods
-"react-icons": "^4.3.1", - Icons for React. Probably not needed as we are using MUI icons
-"react-pro-sidebar": "^0.7.1", - For a sidebar with menus and nested sidebars
-"react-redux": "^7.2.6", - State management
-"react-router-dom": "^6.2.1", - Routing component layouts as urls
-"react-scripts": "5.0.0", - Configuration and scripts for Create React App
-"react-textarea-autosize": "^8.3.3", - For the card component text entry areas
-"redux-persist": "^6.0.0", - For saving the Redux store in the local storage. Probably to be removed when DB CRUD is in place
-"redux-thunk": "^2.4.1", - Redux specific middleware which allows redux actions to be asynchronous
-"styled-components": "^5.3.3", - CSS in JS. Keeps component styling in same files as components
-"three": "^0.136.0", - 3D rendering
-"uuid": "^8.3.2", - Generating random id numbers for elements. e.g. When boards, cards and lists are created
+"@craco/craco": "^6.4.3", - For accessing Webpack config files to alias Material UI to work with styled-components  
+"@mui/material": "^5.3.0", - Material UI package that contains components to use  
+"@mui/styled-engine-sc": "^5.3.0", - The styled-components engine for Material UI  
+"bootstrap": "^5.1.3", - UI framework  
+"react": "^17.0.2", - Virtual DOM framework  
+"react-beautiful-dnd": "^13.1.0", - Dragging and dropping components  
+"react-dom": "^17.0.2", - React DOM methods  
+"react-icons": "^4.3.1", - Icons for React. Probably not needed as we are using MUI icons  
+"react-pro-sidebar": "^0.7.1", - For a sidebar with menus and nested sidebars  
+"react-redux": "^7.2.6", - State management  
+"react-router-dom": "^6.2.1", - Routing component layouts as urls  
+"react-scripts": "5.0.0", - Configuration and scripts for Create React App  
+"react-textarea-autosize": "^8.3.3", - For the card component text entry areas  
+"redux-persist": "^6.0.0", - For saving the Redux store in the local storage. Probably to be removed when DB CRUD is in place  
+"redux-thunk": "^2.4.1", - Redux specific middleware which allows redux actions to be asynchronous  
+"styled-components": "^5.3.3", - CSS in JS. Keeps component styling in same files as components  
+"three": "^0.136.0", - 3D rendering  
+"uuid": "^8.3.2", - Generating random id numbers for elements. e.g. When boards, cards and lists are created  
 "vanta": "^0.5.21", - Rendering, build upon 3.js
