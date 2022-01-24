@@ -9,26 +9,6 @@ import { editCard, deleteCard } from "../actions";
 import TrelloButton from "./TrelloButton";
 import TrelloForm from "./TrelloForm";
 
-//placeholder for mui icon
-// const Icon = () => {
-//   return <p>Icon</p>;
-// };
-
-//placeholder for mui card
-// const Card = () => {
-//   return <p>Card</p>;
-// };
-
-//placeholder for mui cardcontent
-// const CardContent = () => {
-//   return <p>CardContent</p>;
-// };
-
-//placeholder for mui typography
-// const Typography = () => {
-//   return <p>Typography</p>;
-// };
-
 const CardContainer = styled.div`
   margin: 0 0 8px 0;
   position: relative;
@@ -56,7 +36,7 @@ const DeleteButton = styledMUI(Icon)`
   display: none;
   right: 5px;
   bottom: 5px;
-  opacity: 0.5;
+  opacity: 1;
   ${CardContainer}:hover & {
     display: block;
     cursor: pointer;
@@ -124,4 +104,5 @@ const TrelloCard = React.memo(({ text, id, listID, index, dispatch }) => {
   return isEditing ? renderEditForm() : renderCard();
 });
 
+// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 export default connect()(TrelloCard);

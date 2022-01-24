@@ -10,7 +10,7 @@ import TrelloCard from "./TrelloCard";
 import TrelloCreate from "./TrelloCreate";
 
 const ListContainer = styled.div`
-  background-color: #dfe3e6;
+  background-color: #dfe3e620;
   border-radius: 3px;
   width: 300px;
   padding: 8px;
@@ -46,6 +46,7 @@ const DeleteButton = styled(Icon)`
 `;
 
 const ListTitle = styled.h4`
+  color: white;
   transition: background 0.3s ease-in;
   ${TitleContainer}:hover & {
     background: #ccc;
@@ -115,4 +116,5 @@ const TrelloList = ({ title, cards, listID, index, dispatch }) => {
   );
 };
 
+// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 export default connect()(TrelloList);

@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export const SignUp = (setUsername,setPassword,setEmail,signUpHandler) => {
+const SignUp = (setUsername,setPassword,setEmail,signUpHandler) => {
     return(
         <div className="centerr signup">
             <form onSubmit={signUpHandler}>
@@ -14,3 +14,6 @@ export const SignUp = (setUsername,setPassword,setEmail,signUpHandler) => {
         </div>
     )
 }
+
+export default SignUp;
+

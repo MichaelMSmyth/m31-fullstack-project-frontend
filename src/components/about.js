@@ -1,7 +1,9 @@
-export const AboutComp = () => {
-    return(
-        <div>
-            <p>About function</p>
-        </div>
-    )
-}
+const About = () => {
+  return (
+    <div>
+      <p>About function</p>
+    </div>
+  );
+};
+
+export default About;

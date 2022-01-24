@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-export const LandingComp = ({ setUsername, setPassword, signInHandler }) => {
+const Landing = ({ setUsername, setPassword, signInHandler }) => {
   return (
-    <div>
     <div className="centerr signup">
       <form onSubmit={() => signInHandler}>
         <h2>Login Here!</h2>
@@ -22,6 +22,15 @@ export const LandingComp = ({ setUsername, setPassword, signInHandler }) => {
         </Link>
       </form>
     </div>
-    </div>
   );
 };
+
+//react-redux.js.org/using-react-redux/accessing-store
+
+const mapStateToProps = (state) => ({
+  boards: state.boards,
+  boardOrder: state.boardOrder,
+});
+
+// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
+export default connect(mapStateToProps)(Landing);

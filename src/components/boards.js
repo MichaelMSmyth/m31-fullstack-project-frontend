@@ -1,7 +1,9 @@
-export const BoardsComp = () => {
-    return(
-        <div>
-            <h1>Boards</h1>
-        </div>
-    )
-}
+const Boards = () => {
+  return (
+    <div>
+      <h1>Boards</h1>
+    </div>
+  );
+};
+
+export default Boards;
