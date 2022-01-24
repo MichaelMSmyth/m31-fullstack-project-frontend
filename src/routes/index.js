@@ -14,8 +14,7 @@ const AppRouter = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/:boardID" element={<TrelloBoard />} />
+        <Route path="/home" element={<TrelloBoard />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/boards" element={<Boards />} />
