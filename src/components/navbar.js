@@ -1,8 +1,7 @@
 // TODO integrate navbar component
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiLayout, FiX, FiLogOut } from "react-icons/fi";
-import { BsQuestionDiamondFill } from "react-icons/bs";
+import { FiMenu, FiLayout, FiX, FiLogOut, FiGitlab } from "react-icons/fi";
 
 const NavBar = () => {
     const [modal, setModal] = useState(true);
@@ -40,9 +39,9 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/about">
-                    <BsQuestionDiamondFill />
-                    About
+                    <Link to="/get-started">
+                    <FiGitlab />
+                    Get Started
                     </Link>
                 </li>
                 <li>

@@ -26,7 +26,7 @@
   flex-direction: column;
   font-family: "Lora", serif;
   width: 12vw;
-  height: 100vh;
+  height: 90vh;
   margin: 0px;
   animation: slidein 0.5s ease forwards;
 }
