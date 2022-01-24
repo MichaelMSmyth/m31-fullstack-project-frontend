@@ -1,24 +1,27 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TrelloBoard from "../components/TrelloBoard";
-import { LandingComp } from "../components/Landing";
-import { AboutComp } from "../components/about";
-import { SignUp } from "../components/signup";
-import { GetStarted } from "../components/get-started";
-import { BoardsComp } from "../components/boards";
-import { ResetComp } from "../components/resetpass";
+
+import Home from "../components/Home";
+import Landing from "../components/Landing";
+import SignUp from "../components/SignUp";
+import About from "../components/About";
+import GetStarted from "../components/GetStarted";
+import Boards from "../components/Boards";
+import ResetPassword from "../components/ResetPassword";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/about" element={<AboutComp/>}/>
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/get-started" element={<GetStarted/>}/>
-          <Route path="/boards" element={<BoardsComp/>}/>
-          <Route path="/reset-pass" element={<ResetComp/>}/>
-          <Route path="/:boardID" element={<TrelloBoard />} />
-          <Route path="/" element={<LandingComp/>}/>
+        <Route path="/home" element={<Home />} />
+        <Route path="/:boardID" element={<TrelloBoard />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/boards" element={<Boards />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   );

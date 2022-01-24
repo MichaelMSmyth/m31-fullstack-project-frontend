@@ -13,6 +13,17 @@ import React from "react";
 import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
+import { FiMenu, FiLayout, FiX, FiLogOut } from "react-icons/fi";
+
+import { LandingComp } from "./components/Landing";
+import { SignUp } from "./components/signup";
+import { AboutComp } from "./components/About";
+import { GetStarted } from "./components/GetStarted";
+import { BoardsComp } from "./components/Boards";
+import { ResetComp } from "./components/resetpass";
+
+import "./App.css"; // Remove after integrating styles to styled components
+import "react-pro-sidebar/dist/css/styles.css";
 
 export default function App() {
   const [modal,setModal] = useState(true);
@@ -25,11 +36,13 @@ export default function App() {
   const [update,setUpdate] = useState(false);
 
   // Crud Handlers ( May need tweaking when integrating but core functionality is there )
+  // Seting fetch request responses to state
   const signUpHandler = async (e) => {
     e.preventDefault();
-    const returnValue = await signUpFetch(username,email,password);
-    setUser(returnValue.user.username)
-  }
+
+    const returnValue = await signUpFetch(username, email, password);
+    setUser(returnValue.user.username);
+  };
 
   const signInHandler = async (e) => {
     e.preventDefault();
