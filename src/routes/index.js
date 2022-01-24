@@ -4,7 +4,6 @@ import TrelloBoard from "../components/TrelloBoard";
 
 import Landing from "../components/Landing";
 import SignUp from "../components/signup";
-import About from "../components/About";
 import GetStarted from "../components/GetStarted";
 import Boards from "../components/Boards";
 import ResetPassword from "../components/ResetPassword";
@@ -15,8 +14,8 @@ const AppRouter = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<TrelloBoard />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/:boardID" element={<TrelloBoard />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/boards" element={<Boards />} />
