@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TrelloBoard from "../components/TrelloBoard";
 
-import Home from "../components/Home";
+import Home from "../components/home";
 import Landing from "../components/Landing";
-import SignUp from "../components/SignUp";
-import About from "../components/About";
+import SignUp from "../components/signup";
+import About from "../components/about";
 import GetStarted from "../components/GetStarted";
-import Boards from "../components/Boards";
+import Boards from "../components/boards";
 import ResetPassword from "../components/ResetPassword";
 import Navbar from "../components/navbar";
 

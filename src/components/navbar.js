@@ -20,11 +20,11 @@ const NavBar = () => {
             {/* {!log ? ( */}
             <div>
             {modal ? (
-                <button className="nodeco hamburger" onClick={toggler}>
+                <button className="nodeco hamburger react-icons" onClick={toggler}>
                 <FiMenu />
                 </button>
             ) : (
-                <button className="nodeco x" onClick={toggler}>
+                <button className="nodeco x react-icons" onClick={toggler}>
                 <FiX />
                 </button>
             )}
@@ -34,7 +34,7 @@ const NavBar = () => {
             <ul className="navactive neumorph card">
                 <div className="column">
                 <li>
-                    <Link to="/boards">
+                    <Link to="/home">
                     <FiLayout />
                     Boards
                     </Link>

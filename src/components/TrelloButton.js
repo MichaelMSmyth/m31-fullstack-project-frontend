@@ -12,6 +12,7 @@ const StyledButton = styledMUI(Button)`
   && {
     color: white;
     background: none;
+    font-family: "Poppins", sans-serif;
   }
 `;
 

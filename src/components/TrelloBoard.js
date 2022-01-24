@@ -12,7 +12,15 @@ import TrelloCreate from "./TrelloCreate";
 const ListsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  font-family: "Poppins", sans-serif;
 `;
+const Title = styled.h2`
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: white;
+`
+
 
 const TrelloBoard = (props) => {
   const { boardID } = useParams();
@@ -41,8 +49,8 @@ const TrelloBoard = (props) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Link to="/">Go Back</Link>
-      <h2>{board.title}</h2>
+      <Link to="/home">Go Back</Link>
+      <Title>{board.title}</Title>
       <Droppable droppableId="all-lists" direction="horizontal" type="list">
         {(provided) => (
           <ListsContainer {...provided.droppableProps} ref={provided.innerRef}>
@@ -69,5 +77,4 @@ const mapStateToProps = (state) => ({
   boards: state.boards,
 });
 
-// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 export default connect(mapStateToProps)(TrelloBoard);
