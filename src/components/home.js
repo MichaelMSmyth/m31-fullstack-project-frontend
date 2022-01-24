@@ -23,21 +23,21 @@ const HomeContainer = styled.div`
 `;
 
 const CreateTitle = styled.h3`
-  font-size: 48px;
+  font-size: 2rem;
   color: white;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
 const CreateInput = styled.input`
-  width: 400px;
+  width: 30vw;
   height: 80px;
-  font-size: 22px;
+  font-size: 1.5rem;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 3px;
   border: none;
-  outline-color: blue;
+  outline-color: none;
   box-shadow: 0 2px 4px grey;
   align-self: center;
 `;
