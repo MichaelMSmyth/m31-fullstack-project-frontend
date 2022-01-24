@@ -1,6 +1,4 @@
 import './App.css';
-// import * as THREE from 'three';
-// import CLOUDS from "vanta/dist/vanta.clouds.min.js";
 import styled from 'styled-components'
 import {HomeComp} from './components/home';
 import {SignUp} from './components/signup';
@@ -100,9 +98,16 @@ export default function App() {
 
   return (
     <div>
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+    <div classname="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        <div class="bg"></div>
+        <div class="starfield">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        </div>
     </div>
     <Router>
       <div>
@@ -134,7 +139,7 @@ export default function App() {
                 </li>
               </div>
           </ul>
-          )}
+          )} 
         </nav>
         <Routes>
           <Route path="/about" element={<About/>}/>
@@ -169,19 +174,3 @@ function ResetPass() {
   return (<ResetComp/>)
 }
 
-// Still testing but will use vantajs to create animated background
-// const AnimateBG = () => {
-//   const [vantaEffect, setVantaEffect] = useState(0)
-//   const myRef = useRef(null)
-//   useEffect(() => {
-//     if (!vantaEffect) {
-//       setVantaEffect(CLOUDS({
-//         el: myRef.current
-//       }))
-//     }
-//     return () => {
-//       if (vantaEffect) vantaEffect.destroy()
-//     }
-//   }, [vantaEffect])
-//   return <div ref={myRef}></div>
-// }
