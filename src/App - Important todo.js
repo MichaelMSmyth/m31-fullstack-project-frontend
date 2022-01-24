@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components'
-import {HomeComp} from './components/home';
+import {HomeComp} from './components/Home';
 import {SignUp} from './components/signup';
 import { AboutComp } from './components/about';
 import { GetStarted } from './components/get-started';
@@ -10,14 +10,8 @@ import { FiMenu, FiLayout, FiX, FiLogOut} from "react-icons/fi";
 import {BsQuestionDiamondFill} from "react-icons/bs";
 import { signInFetch, signUpFetch, updateFetch, deleteFetch, tokenCheck, logOut} from './utils/utils';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
-import 'react-pro-sidebar/dist/css/styles.css';
 
 
 export default function App() {
@@ -109,7 +103,6 @@ export default function App() {
         <div class="layer"></div>
         </div>
     </div>
-    <Router>
       <div>
         <nav>
           {!log ? (
@@ -141,16 +134,7 @@ export default function App() {
           </ul>
           )} 
         </nav>
-        <Routes>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/signup" element={<Signup/>}/>
-          <Route path="/get-started" element={<Getstarted/>}/>
-          <Route path="/boards" element={<Boards/>}/>
-          <Route path="/reset-pass" element={<ResetPass/>}/>
-          <Route path="/" element={<Home/>}/>
-        </Routes>
-      </div> 
-    </Router>
+      </div>
     </div>
   );
 }
