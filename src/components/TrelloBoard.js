@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import styled from "styled-components";
@@ -12,25 +12,15 @@ import TrelloCreate from "./TrelloCreate";
 const ListsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  font-family: "Poppins", sans-serif;
 `;
-const Title = styled.h2`
-  font-size: 50px;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  color: white;
-`
-
 
 const TrelloBoard = (props) => {
-  const { boardID } = useParams();
-
   const { lists, cards, boards } = props;
-  const board = boards[boardID];
+  const board = boards["board-0"];
   const listOrder = board.lists;
 
   useEffect(() => {
-    props.dispatch(setActiveBoard(boardID));
+    props.dispatch(setActiveBoard("board-0"));
   }, []);
 
   const onDragEnd = (result) => {
@@ -49,8 +39,7 @@ const TrelloBoard = (props) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Link to="/home">Go Back</Link>
-      <Title>{board.title}</Title>
+      <Link to="/">Go Back</Link>
       <Droppable droppableId="all-lists" direction="horizontal" type="list">
         {(provided) => (
           <ListsContainer {...provided.droppableProps} ref={provided.innerRef}>
