@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 export const ResetComp = ({setEmail}) => {
     return(
-        <div className="centerr">
+        <div className="centerr signup">
             <form>
             <h2>Reset your Password</h2>
             <p>--------------------------------------------------------</p>

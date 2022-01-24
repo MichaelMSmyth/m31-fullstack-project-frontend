@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiLayout, FiX, FiLogOut} from "react-icons/fi";
 import {BsQuestionDiamondFill} from "react-icons/bs";
 
-export const NAV = () => {
+const NAV = () => {
     const [modal,setModal] = useState(true);
     const [log,Setlog] = useState(true);
 
@@ -34,7 +34,7 @@ export const NAV = () => {
             <ul className='navactive neumorph card'>
                 <div className='column'>
                     <li>
-                    <Link to="/boards"><FiLayout/>Boards</Link>
+                    <Link to="/home"><FiLayout/>Boards</Link>
                     </li>
                     <li>
                     <Link to="/about"><BsQuestionDiamondFill/>About</Link>
@@ -49,3 +49,5 @@ export const NAV = () => {
         </div>
     )
 }
+
+export default NAV;

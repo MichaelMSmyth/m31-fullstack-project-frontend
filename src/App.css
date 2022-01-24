@@ -148,24 +148,8 @@ li{
     position: absolute;
     border-radius: 50%;
 }
-.shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
-form{
+
+.signup{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
@@ -179,14 +163,14 @@ form{
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
-form *{
+.signup *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-form h3{
+.signup h3{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -252,7 +236,7 @@ input{
 /* Animated BG */
 
 .bg {
-    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background: url(https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80) no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
