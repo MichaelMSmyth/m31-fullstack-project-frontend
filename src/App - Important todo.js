@@ -13,9 +13,9 @@ import { signInFetch, signUpFetch, updateFetch, deleteFetch, tokenCheck, logOut 
 
 import { LandingComp } from "./components/Landing";
 import { SignUp } from "./components/signup";
-import { AboutComp } from "./components/about";
-import { GetStarted } from "./components/get-started";
-import { BoardsComp } from "./components/boards";
+import { AboutComp } from "./components/About";
+import { GetStarted } from "./components/GetStarted";
+import { BoardsComp } from "./components/Boards";
 import { ResetComp } from "./components/resetpass";
 
 import "./App.css"; // Remove after integrating styles to styled components
@@ -32,12 +32,12 @@ export default function App() {
   const [update, setUpdate] = useState(false);
 
   // Crud Handlers ( May need tweaking when integrating but core functionality is there )
+  // Seting fetch request responses to state
   const signUpHandler = async (e) => {
     e.preventDefault();
     const returnValue = await signUpFetch(username, email, password);
     setUser(returnValue.user.username);
   };
-
   const signInHandler = async (e) => {
     e.preventDefault();
     try {

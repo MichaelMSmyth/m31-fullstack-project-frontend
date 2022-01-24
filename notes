@@ -15,9 +15,9 @@ Figure out way to integrate state into backend with Redux OR figure out way to r
 Remove cdn script tags from public/index.html and integrate fully via packages
 Make and update favicon
 Think of name for app and create a logo
+Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 Write Redux functionality to delete boards
 Write Redux functionality to move boards
-
 
 Git:
 
@@ -29,7 +29,7 @@ git add
 git commit -m "meaningful message" // to commit my branch
 git push --set-upstream origin branchname // to push the branch
 create a pull request base:main compare:branchname
-git pull origin main // 
+git pull origin main //
 npm i // will install dependencies
 
 Packages:
