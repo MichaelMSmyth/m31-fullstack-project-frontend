@@ -36,7 +36,7 @@ const DeleteButton = styledMUI(Icon)`
   display: none;
   right: 5px;
   bottom: 5px;
-  opacity: 0.5;
+  opacity: 1;
   ${CardContainer}:hover & {
     display: block;
     cursor: pointer;

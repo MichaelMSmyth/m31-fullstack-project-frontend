@@ -11,7 +11,7 @@ import { Button } from "@mui/material/";
 const StyledButton = styledMUI(Button)`
   && {
     color: white;
-    background: #5aac44;
+    background: none;
   }
 `;
 
