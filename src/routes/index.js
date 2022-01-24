@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import TrelloBoard from "../components/TrelloBoard";
+
 import Home from "../components/Home";
 import Landing from "../components/Landing";
 import SignUp from "../components/SignUp";

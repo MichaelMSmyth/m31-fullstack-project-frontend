@@ -4,9 +4,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { createGlobalStyle } from "styled-components";
 
-import "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js";
-
-import "./index.css";
+import "./App.css";
 
 import Store from "./store";
 import App from "./components/App";
@@ -14,19 +12,19 @@ import App from "./components/App";
 const { persistor, store } = Store();
 
 const GlobalStyle = createGlobalStyle`
-  html {
+html {
     background-color: none;
     box-sizing: border-box;
     transition: all 0.5s ease-in ease-out;
-  }
+}
 `;
 
 ReactDOM.render(
-  <Provider store={store}>
+<Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <GlobalStyle />
-      <App />
+    <GlobalStyle />
+    <App />
     </PersistGate>
-  </Provider>,
-  document.getElementById("root")
+    </Provider>,
+    document.getElementById("root")
 );

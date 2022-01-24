@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const Landing = ({ setUsername, setPassword, signInHandler }) => {
   return (
+    <div>
     <div className="centerr">
       <form onSubmit={() => signInHandler}>
         <h2>Login Here!</h2>
@@ -20,6 +21,7 @@ const Landing = ({ setUsername, setPassword, signInHandler }) => {
           Forgotten your password? Click here to reset.
         </Link>
       </form>
+    </div>
     </div>
   );
 };
