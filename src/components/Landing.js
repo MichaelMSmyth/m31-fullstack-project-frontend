@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-export const LandingComp = ({ setUsername, setPassword, signInHandler }) => {
+
+const Landing = ({ setUsername, setPassword, signInHandler }) => {
   return (
     <div className="centerr">
       <form onSubmit={() => signInHandler}>
@@ -22,3 +23,5 @@ export const LandingComp = ({ setUsername, setPassword, signInHandler }) => {
     </div>
   );
 };
+
+export default Landing;

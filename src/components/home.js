@@ -91,4 +91,5 @@ const mapStateToProps = (state) => ({
   boardOrder: state.boardOrder,
 });
 
+// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 export default connect(mapStateToProps)(Home);

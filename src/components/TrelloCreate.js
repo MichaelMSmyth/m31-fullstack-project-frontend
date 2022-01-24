@@ -9,6 +9,7 @@ import TrelloButton from "./TrelloButton";
 import TrelloForm from "./TrelloForm";
 import TrelloOpenForm from "./TrelloOpenForm";
 
+// PureComponents are a perfromance optimisation
 class TrelloCreate extends React.PureComponent {
   state = {
     formOpen: false,
@@ -105,4 +106,5 @@ class TrelloCreate extends React.PureComponent {
   }
 }
 
+// Todo - Replace the old style Redux connect() with updated hooks - https://react-redux.js.org/api/hooks
 export default connect()(TrelloCreate);
