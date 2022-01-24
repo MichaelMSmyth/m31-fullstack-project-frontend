@@ -17,7 +17,7 @@ const Landing = ({ setUsername, setPassword, signInHandler }) => {
           {" "}
           New user? create a free account here!{" "}
         </Link>
-        <Link className="p" to="/reset-pass">
+        <Link className="p" to="/reset-password">
           Forgotten your password? Click here to reset.
         </Link>
       </form>
