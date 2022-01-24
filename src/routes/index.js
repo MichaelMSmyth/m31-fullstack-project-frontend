@@ -9,10 +9,12 @@ import About from "../components/About";
 import GetStarted from "../components/GetStarted";
 import Boards from "../components/Boards";
 import ResetPassword from "../components/ResetPassword";
+import Navbar from "../components/navbar";
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/:boardID" element={<TrelloBoard />} />

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const Landing = ({ setUsername, setPassword, signInHandler }) => {
   return (
-    <div className="centerr">
+    <div className="centerr signup">
       <form onSubmit={() => signInHandler}>
         <h2>Login Here!</h2>
         <label for="Email">Email</label>
