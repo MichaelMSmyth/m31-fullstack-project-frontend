@@ -12,6 +12,11 @@ const Container = styled("div")`
 const StyledCard = styled(Card)`
   min-height: 85px;
   padding: 6px 8px 2px;
+
+  background-color: #dfe3e620;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  font-family: "Poppins", sans-serif;
 `;
 
 const StyledTextArea = styled(Textarea)`

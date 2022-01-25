@@ -6,7 +6,7 @@ import Landing from "../components/Landing";
 import SignUp from "../components/Sign-Up";
 import GetStarted from "../components/GetStarted";
 import ResetPassword from "../components/ResetPassword";
-import NavBar from "../components/Nav-Bar";
+import NavBar from "../components/NavBar";
 import Settings from "../components/Settings";
 
 const AppRouter = () => {
