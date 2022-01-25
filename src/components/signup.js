@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { signUpFetch } from "../utils/utils";
 
-const SignUp = (setUsername,setPassword,setEmail,signUpHandler) => {
+const SignUp = () => {
+    const [user,setUser] = useState();
+    const [username,setUsername] = useState();
+    const [email,setEmail] = useState();
+    const [password,setPassword] = useState();
+    
+    const signUpHandler = async (e) => {
+        e.preventDefault();
+        const returnValue = await signUpFetch(username,email,password);
+        setUser(returnValue.user.username)
+    }
     return(
         <div className="centerr signup">
             <form onSubmit={signUpHandler}>

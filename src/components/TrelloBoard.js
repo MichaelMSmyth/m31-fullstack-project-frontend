@@ -12,6 +12,8 @@ import TrelloCreate from "./TrelloCreate";
 const ListsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin-left: 200px;
+  margin-top: 150px;
 `;
 
 const TrelloBoard = (props) => {
@@ -39,7 +41,6 @@ const TrelloBoard = (props) => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Link to="/">Go Back</Link>
       <Droppable droppableId="all-lists" direction="horizontal" type="list">
         {(provided) => (
           <ListsContainer {...provided.droppableProps} ref={provided.innerRef}>

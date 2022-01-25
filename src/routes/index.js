@@ -7,6 +7,7 @@ import SignUp from "../components/SignUp";
 import GetStarted from "../components/GetStarted";
 import ResetPassword from "../components/ResetPassword";
 import Navbar from "../components/NavBar";
+import Settings from "../components/Settings";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/settings" element={<Settings/>}/>
         <Route path="/" element={<Landing />} />
       </Routes>
     </BrowserRouter>

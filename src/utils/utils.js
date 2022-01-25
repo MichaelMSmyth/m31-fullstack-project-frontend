@@ -17,13 +17,13 @@ export const signUpFetch = async (username,email,password) => {
     }
 }
 
-export const signInFetch = async (username, password) => {
+export const signInFetch = async (email, password) => {
     try {
     const response = await fetch(`${process.env.REACT_APP_REST_API}user/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-        username,
+        email,
         password,
         }),
     });
@@ -58,7 +58,7 @@ export const deleteFetch = async (username,setter,user) => {
     await fetch(`${process.env.REACT_APP_REST_API}user/${username}`, {
         method: "DELETE",});
     setter(user);
-    return alert("Successfully deleted user");
+    return alert("Successfully deleted");
     } catch (error) {
     console.log(error);
     return alert("Cannot delete currently");
@@ -67,7 +67,7 @@ export const deleteFetch = async (username,setter,user) => {
 
 export const tokenCheck = async (token, setter) => {
     try {
-    const response = await fetch(`${process.env.REACT_APP_REST_API}user`, {
+    const response = await fetch(`${process.env.REACT_APP_REST_API}`, {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
     });
@@ -80,7 +80,7 @@ export const tokenCheck = async (token, setter) => {
 
 export const logOut = async () =>{
     try {
-        localStorage.clear();
+        localStorage.removeItem("jwtToken");
         alert("Logged Out")
     } catch (error) {
         console.log(error);

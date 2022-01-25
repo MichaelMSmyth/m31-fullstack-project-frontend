@@ -16,10 +16,9 @@ const ListContainer = styled.div`
   padding: 8px;
   height: 100%;
   margin: 0 8px 0 0;
-
-  -webkit-backdrop-filter: blur(7px) saturate(48%);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  font-family: "Poppins", sans-serif;
 `;
 
 const StyledInput = styled.input`
@@ -51,6 +50,8 @@ const DeleteButton = styled(Icon)`
 
 const ListTitle = styled.h4`
   color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
   transition: background 0.3s ease-in;
   ${TitleContainer}:hover & {
     color: black;

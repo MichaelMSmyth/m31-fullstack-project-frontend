@@ -6,6 +6,7 @@ import Textarea from "react-textarea-autosize";
 const Container = styled.div`
   width: 284px;
   margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
 `;
 
 const StyledCard = styled(Card)`
@@ -19,6 +20,7 @@ const StyledTextArea = styled(Textarea)`
   overflow: hidden;
   outline: none;
   border: none;
+  font-family: "Poppins", sans-serif;
 `;
 
 const ButtonContainer = styled.div`
@@ -26,6 +28,7 @@ const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 8px;
+  font-family: "Poppins", sans-serif;
 `;
 
 const StyledIcon = styled(Icon)`
