@@ -1,13 +1,36 @@
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { useState,useEffect } from "react";
+import {signInFetch,tokenCheck} from '../utils/utils.js';
 
-const Landing = ({ setUsername, setPassword, signInHandler }) => {
+
+const Landing = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const signInHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const returnValue = await signInFetch(email, password);
+      setEmail(returnValue.email);
+      setPassword(returnValue.password);
+      window.location.reload(false);
+    } catch (error) {
+      console.log(error);
+      alert("error");
+    }
+  };
+
+  useEffect(() => {
+    tokenCheck(localStorage.getItem("MyToken"), setEmail);
+  }, []);
+
   return (
     <div className="centerr signup">
-      <form onSubmit={() => signInHandler}>
+      <form onSubmit={signInHandler}>
         <h2>Login Here!</h2>
         <label for="Email">Email</label>
-        <input id="email" onChange={(e) => setUsername(e.target.value)} placeholder="Email" />
+        <input id="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
         <label for="password">Password</label>
         <input id="password" type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
         <button className="btn" type="submit">

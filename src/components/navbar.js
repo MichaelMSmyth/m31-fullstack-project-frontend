@@ -1,7 +1,8 @@
 // TODO integrate navbar component
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiLayout, FiX, FiLogOut, FiGitlab } from "react-icons/fi";
+import { FiMenu, FiLayout, FiSettings, FiLogOut, FiGitlab } from "react-icons/fi";
+import { logOut } from "../utils/utils";
 
 const NavBar = () => {
     const [modal, setModal] = useState(true);
@@ -13,6 +14,12 @@ const NavBar = () => {
     const toggler = () => {
         modal ? setModal(false) : setModal(true);
     };
+
+    const logOutHandler = async () => {
+        await logOut();
+        window.location.reload(false);
+    };
+
     return (
         <div>
         <nav>
@@ -24,7 +31,7 @@ const NavBar = () => {
                 <li>
                     <Link className="navsize" to="/home">
                     <FiLayout />
-                    Boards
+                    Your Board
                     </Link>
                 </li>
                 <li>
@@ -34,7 +41,13 @@ const NavBar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link className="navsize" to="/">
+                    <Link className="navsize" to="/settings">
+                    <FiSettings  />
+                    Settings
+                    </Link>
+                </li>
+                <li>
+                    <Link className="navsize" to="/" onClick={logOutHandler}>
                     <FiLogOut />
                     Logout
                     </Link>

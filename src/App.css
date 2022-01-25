@@ -24,6 +24,36 @@ body{
   margin: 0px;
 }
 
+.dlt:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.dlt{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white; 
+  height: 50px;
+  width: 200px;
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.dlt:hover{
+  transform: scale(1.02);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .navactive {
   display: flex;
   flex-direction: column;
