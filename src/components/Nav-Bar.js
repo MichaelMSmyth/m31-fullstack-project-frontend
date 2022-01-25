@@ -6,11 +6,12 @@ import { logOut } from "../utils/utils";
 
 const NavBar = () => {
   const [modal, setModal] = useState(true);
-  const [log, Setlog] = useState(true);
+  // const [log, Setlog] = useState(true);
 
-  const isLoggedIn = () => {
-    log ? Setlog(false) : Setlog(true);
-  };
+  // const isLoggedIn = () => {
+  //   log ? Setlog(false) : Setlog(true);
+  // };
+
   const toggler = () => {
     modal ? setModal(false) : setModal(true);
   };
