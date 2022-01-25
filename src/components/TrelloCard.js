@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Draggable } from "react-beautiful-dnd";
-import styled from "styled-components";
-import { styled as styledMUI, Card, Icon, Typography, CardContent } from "@mui/material/";
+import { Card, Icon, Typography, CardContent } from "@mui/material/";
+import styled from "@emotion/styled/macro";
 
 import { editCard, deleteCard } from "../actions";
 
 import TrelloButton from "./TrelloButton";
 import TrelloForm from "./TrelloForm";
 
-const CardContainer = styled.div`
+const CardContainer = styled("div")`
   margin: 0 0 8px 0;
   position: relative;
   max-width: 100%;
   word-wrap: break-word;
 `;
 
-const EditButton = styledMUI(Icon)`
+const EditButton = styled(Icon)`
   position: absolute;
   display: none;
   right: 5px;
@@ -31,7 +31,7 @@ const EditButton = styledMUI(Icon)`
   }
 `;
 
-const DeleteButton = styledMUI(Icon)`
+const DeleteButton = styled(Icon)`
   position: absolute;
   display: none;
   right: 5px;

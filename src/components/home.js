@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { styled } from "@emotion/styled";
+
 import { addBoard } from "../actions";
 import BoardThumbnail from "./BoardThumbnail";
 
-const Thumbnails = styled.div`
+const Thumbnails = styled("div")`
   flex: 1;
   height: 50%;
   margin: 0 auto;
@@ -15,21 +16,21 @@ const Thumbnails = styled.div`
   justify-content: center;
 `;
 
-const HomeContainer = styled.div`
+const HomeContainer = styled("div")`
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
 `;
 
-const CreateTitle = styled.h3`
+const CreateTitle = styled("h3")`
   font-size: 2rem;
   color: white;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
-const CreateInput = styled.input`
+const CreateInput = styled("input")`
   width: 30vw;
   height: 80px;
   font-size: 1.5rem;

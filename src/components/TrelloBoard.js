@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import styled from "styled-components";
+import styled from "@emotion/styled/macro";
 
 import { sort, setActiveBoard } from "../actions";
 
 import TrelloList from "./TrelloList";
 import TrelloCreate from "./TrelloCreate";
 
-const ListsContainer = styled.div`
+const ListsContainer = styled("div")`
   display: flex;
   flex-direction: row;
 `;

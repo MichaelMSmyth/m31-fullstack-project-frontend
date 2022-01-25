@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { Card, Icon } from "@mui/material/";
+import styled from "@emotion/styled/macro";
 import Textarea from "react-textarea-autosize";
 
-const Container = styled.div`
+const Container = styled("div")`
   width: 284px;
   margin-bottom: 8px;
 `;
@@ -21,7 +21,7 @@ const StyledTextArea = styled(Textarea)`
   border: none;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled("div")`
   margin-top: 8px;
   display: flex;
   align-items: center;
