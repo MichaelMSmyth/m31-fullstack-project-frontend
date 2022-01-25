@@ -90,3 +90,5 @@ dispatch(editTitle(listID, listTitle));
 const handleDeleteList = () => {
 dispatch(deleteList(listID));
 };
+
+may be able to use MUI instaed of styled components and remove craco
