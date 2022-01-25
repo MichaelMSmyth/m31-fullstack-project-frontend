@@ -84,6 +84,16 @@ body {
   overflow: hidden;
 }
 
+.BackgroundStars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 1001px) {
   a {
     font-size: 40px;
