@@ -10,16 +10,19 @@ import TrelloCard from "./TrelloCard";
 import TrelloCreate from "./TrelloCreate";
 
 const ListContainer = styled("div")`
-  background-color: #dfe3e620;
   border-radius: 3px;
   width: 300px;
   padding: 8px;
   height: 100%;
   margin: 0 8px 0 0;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-family: "Poppins", sans-serif;
+
+  background-color: rgba(255, 255, 255, 0.01);
 `;
+
+// backdrop-filter: blur(6px);
 
 const StyledInput = styled("input")`
   width: 100%;
@@ -54,7 +57,7 @@ const ListTitle = styled("h4")`
   font-size: 20px;
   transition: background 0.3s ease-in;
   ${TitleContainer}:hover & {
-    color: black;
+    color: white;
   }
 `;
 

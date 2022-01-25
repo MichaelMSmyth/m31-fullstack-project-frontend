@@ -2,8 +2,9 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import Routes from "../routes";
 import Store from "../store";
-
-const { store } = Store();
+import BackgroundStars from "./BackgroundCanvas";
+// <div class="starfield">
+// const { store } = Store();
 
 // This is an alternative React component class which can be used to stop child components from rerendering if their props don't change. It's a performance optimisation. Unfortunately this only works with class components, not functional ones.
 class App extends PureComponent {
@@ -14,12 +15,11 @@ class App extends PureComponent {
           <div className="shape"></div>
           <div className="shape"></div>
           <div class="bg"></div>
-          <div class="starfield">
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-          </div>
+          <BackgroundStars />
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
         </div>
         <Routes />
       </div>
