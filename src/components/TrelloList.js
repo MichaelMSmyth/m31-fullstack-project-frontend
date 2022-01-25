@@ -16,7 +16,7 @@ const ListContainer = styled.div`
   padding: 8px;
   height: 100%;
   margin: 0 8px 0 0;
-  backdrop-filter: blur(7px) saturate(48%);
+
   -webkit-backdrop-filter: blur(7px) saturate(48%);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
