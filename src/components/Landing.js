@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { useState,useEffect } from "react";
-import {signInFetch,tokenCheck} from '../utils/utils.js';
-
+import { useState, useEffect } from "react";
+import { signInFetch, tokenCheck } from "../utils/utils.js";
 
 const Landing = () => {
   const [email, setEmail] = useState();
