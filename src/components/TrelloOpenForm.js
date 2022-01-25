@@ -17,8 +17,10 @@ const TrelloOpenForm = ({ list, children, onClick }) => {
     width: 300px;
     padding-left: 10px;
     padding-right: 10px;
-    opacity: ${buttonTextOpacity};
+    opacity: 1;
     color: ${buttonTextColor};
+    font-family: "Poppins", sans-serif;
+    color: white;
   `;
 
   return (

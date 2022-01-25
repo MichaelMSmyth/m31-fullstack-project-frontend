@@ -3,9 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TrelloBoard from "../components/TrelloBoard";
 
 import Landing from "../components/Landing";
+import Home from "../components/home";
 import SignUp from "../components/signup";
 import GetStarted from "../components/GetStarted";
-import Boards from "../components/Boards";
+import Boards from "../components/boards";
 import ResetPassword from "../components/ResetPassword";
 import Navbar from "../components/navbar";
 

@@ -16,43 +16,32 @@ const NavBar = () => {
     return (
         <div>
         <nav>
-            {/* {!log ? ( */}
-            <div>
-            {modal ? (
-                <button className="nodeco hamburger react-icons" onClick={toggler}>
-                <FiMenu />
-                </button>
-            ) : (
-                <button className="nodeco x react-icons" onClick={toggler}>
-                <FiX />
-                </button>
-            )}
-            </div>
-            {/* ):(<div/>)} */}
-            {!modal && (
-            <ul className="navactive neumorph card">
-                <div className="column">
+                <input type="checkbox" id="menu-toggle"/>
+                <label htmlFor="menu-toggle"className=" hamburger react-icons menu-icon" onClick={toggler}><FiMenu/></label>
+            <div className="slideout-sidebar">
+            <ul>
+                <div>
                 <li>
-                    <Link to="/home">
+                    <Link className="navsize" to="/home">
                     <FiLayout />
                     Boards
                     </Link>
                 </li>
                 <li>
-                    <Link to="/get-started">
+                    <Link className="navsize" to="/get-started">
                     <FiGitlab />
                     Get Started
                     </Link>
                 </li>
                 <li>
-                    <Link to="/">
+                    <Link className="navsize" to="/">
                     <FiLogOut />
                     Logout
                     </Link>
                 </li>
                 </div>
             </ul>
-            )}
+            </div>
         </nav>
         </div>
     );
