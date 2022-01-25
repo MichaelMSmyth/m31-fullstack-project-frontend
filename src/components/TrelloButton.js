@@ -1,14 +1,8 @@
 import React from "react";
-
-import { styled as styledMUI } from "@mui/material/styles";
-
-// import Button from "@material-ui/core/Button";
-// In order to use styled components with MaterialUI in npm we have to set an alias in webpack.alias.js.
-// In order to access the webpack config files without using eject we need the npm craco package
-
+import styled from "@emotion/styled/macro";
 import { Button } from "@mui/material/";
 
-const StyledButton = styledMUI(Button)`
+const StyledButton = styled(Button)`
   && {
     color: white;
     background: none;

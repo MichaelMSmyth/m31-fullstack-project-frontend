@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Droppable, Draggable } from "react-beautiful-dnd";
-import styled from "styled-components";
 import { Icon } from "@mui/material/";
+import styled from "@emotion/styled/macro";
 
 import { editTitle, deleteList } from "../actions";
 
 import TrelloCard from "./TrelloCard";
 import TrelloCreate from "./TrelloCreate";
 
-const ListContainer = styled.div`
+const ListContainer = styled("div")`
   background-color: #dfe3e620;
   border-radius: 3px;
   width: 300px;
@@ -21,7 +21,7 @@ const ListContainer = styled.div`
   font-family: "Poppins", sans-serif;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled("input")`
   width: 100%;
   border: none;
   outline-color: blue;
@@ -30,7 +30,7 @@ const StyledInput = styled.input`
   padding: 5px;
 `;
 
-const TitleContainer = styled.div`
+const TitleContainer = styled("div")`
   width: 100%;
   height: 100%;
   display: flex;
@@ -48,7 +48,7 @@ const DeleteButton = styled(Icon)`
   }
 `;
 
-const ListTitle = styled.h4`
+const ListTitle = styled("h4")`
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 20px;

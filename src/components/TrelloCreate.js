@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
 import { Icon } from "@mui/material/";
+import styled from "@emotion/styled/macro";
 
 import { addList, addCard } from "../actions";
 
@@ -68,7 +68,7 @@ class TrelloCreate extends React.PureComponent {
     const buttonTextColor = list ? "white" : "inherit";
     const buttonTextBackground = list ? "rgba(0,0,0,.15)" : "inherit";
 
-    const OpenFormButton = styled.div`
+    const OpenFormButton = styled("div")`
       display: flex;
       align-items: center;
       cursor: pointer;

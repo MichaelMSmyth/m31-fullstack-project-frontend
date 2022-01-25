@@ -53,3 +53,40 @@ Packages:
 "three": "^0.136.0", - 3D rendering
 "uuid": "^8.3.2", - Generating random id numbers for elements. e.g. When boards, cards and lists are created
 "vanta": "^0.5.21", - Rendering, build upon 3.js
+
+// TrelloCreate.js
+
+handleAddList = () => {
+const { dispatch } = this.props;
+const { text } = this.state;
+
+    if (text) {
+      this.setState({
+        text: "",
+      });
+      dispatch(addList(text));
+    }
+
+      handleAddCard = () => {
+    const { dispatch, listID } = this.props;
+    const { text } = this.state;
+
+    if (text) {
+      this.setState({
+        text: "",
+      });
+      dispatch(addCard(listID, text));
+    }
+
+};
+
+// TrelloList.js state changes
+
+const handleFinishEditing = (e) => {
+setIsEditing(false);
+dispatch(editTitle(listID, listTitle));
+};
+
+const handleDeleteList = () => {
+dispatch(deleteList(listID));
+};
