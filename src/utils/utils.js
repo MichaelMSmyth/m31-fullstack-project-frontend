@@ -1,6 +1,6 @@
 export const signUpFetch = async (username,email,password) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user/signup`,{
             method: "POST",
             headers: {"Content-type": "application/json" },
             body: JSON.stringify({
@@ -38,7 +38,7 @@ export const signInFetch = async (email, password) => {
 
 export const updateFetch = async (username,email) => {
     try {
-        const response = await fetch(`${process.env.REACT_APP_REST_API}user`,{
+        const response = await fetch(`${process.env.REACT_APP_REST_API}user/update`,{
             method: "PUT",
             headers: {"Content-type": "application/json" },
             body: JSON.stringify({
@@ -53,11 +53,11 @@ export const updateFetch = async (username,email) => {
     }
 }
 
-export const deleteFetch = async (username,setter,user) => {
+export const deleteFetch = async (email,setter,mail) => {
     try {
-    await fetch(`${process.env.REACT_APP_REST_API}user/${username}`, {
+    await fetch(`${process.env.REACT_APP_REST_API}user/${email}`, {
         method: "DELETE",});
-    setter(user);
+    setter(mail);
     return alert("Successfully deleted");
     } catch (error) {
     console.log(error);
@@ -80,7 +80,7 @@ export const tokenCheck = async (token, setter) => {
 
 export const logOut = async () =>{
     try {
-        localStorage.removeItem("jwtToken");
+        localStorage.removeItem("MyToken");
         alert("Logged Out")
     } catch (error) {
         console.log(error);
