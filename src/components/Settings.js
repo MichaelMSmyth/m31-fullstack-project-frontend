@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { updateFetch,deleteFetch } from "../utils/utils";
+import { Link } from "react-router-dom";
 
 const Settings = () => {
     const [user,setUser] = useState();
     const [username,setUsername] = useState();
     const [email,setEmail] = useState();
+    const [mail,emailSetter] = useState();
     
     const updateHandler = async (e) => {
         e.preventDefault();
@@ -21,8 +23,9 @@ const Settings = () => {
     };
 
     const deleteHandler = async () => {
-        await deleteFetch(user, setUser);
+        await deleteFetch(mail, emailSetter);
         localStorage.clear();
+        window.location.reload(false);
     };
 
     return(
@@ -35,7 +38,7 @@ const Settings = () => {
             <button className="btn" type="submit">Update</button>
             </form>
             </div>
-            <button className="dlt" onClick={deleteHandler}>Delete Account?</button>
+            <Link to="/"><button className="dlt" onClick={deleteHandler}>Delete Account?</button></Link>
         </div>
     )
 }
