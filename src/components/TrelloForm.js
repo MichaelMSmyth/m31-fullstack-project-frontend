@@ -13,19 +13,25 @@ const StyledCard = styled(Card)`
   min-height: 85px;
   padding: 6px 8px 2px;
 
-  background-color: #dfe3e620;
+  background-color: rgba(255, 255, 255, 0.01);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   font-family: "Poppins", sans-serif;
 `;
 
 const StyledTextArea = styled(Textarea)`
+  background-color: rgba(255, 255, 255, 0.01);
   resize: none;
   width: 100%;
   overflow: hidden;
   outline: none;
   border: none;
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  &::selection {
+    color: white;
+    background: none;
+  }
 `;
 
 const ButtonContainer = styled("div")`

@@ -9,10 +9,26 @@ import { editCard, deleteCard } from "../actions";
 import TrelloButton from "./TrelloButton";
 import TrelloForm from "./TrelloForm";
 
+// border-radius: 3px;
+//   width: 300px;
+//   padding: 8px;
+//   height: 100%;
+//   margin: 0 8px 0 0;
+//   border-radius: 12px;
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+//   font-family: "Poppins", sans-serif;
+//   backdrop-filter: blur(6px);
+//   background-color: rgba(255, 255, 255, 0.01);
+
 const CardContainer = styled("div")`
   margin: 0 0 8px 0;
   position: relative;
   max-width: 100%;
+  word-wrap: break-word;
+`;
+
+const CardTextContainer = styled(CardContent)`
+  background-color: rgba(255, 255, 255, 0.01);
   word-wrap: break-word;
 `;
 
@@ -91,9 +107,9 @@ const TrelloCard = React.memo(({ text, id, listID, index, dispatch }) => {
                 delete
               </DeleteButton>
 
-              <CardContent>
+              <CardTextContainer>
                 <Typography>{text}</Typography>
-              </CardContent>
+              </CardTextContainer>
             </Card>
           </CardContainer>
         )}
