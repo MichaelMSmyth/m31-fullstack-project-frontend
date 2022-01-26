@@ -13,7 +13,7 @@ const ListContainer = styled("div")`
   border-radius: 3px;
   width: 300px;
   padding: 8px;
-  height: 100%;
+  height: 100vh;
   margin: 0 8px 0 0;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);

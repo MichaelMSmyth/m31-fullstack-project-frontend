@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import styled from "@emotion/styled/macro";
@@ -12,8 +11,8 @@ import TrelloCreate from "./TrelloCreate";
 const ListsContainer = styled("div")`
   display: flex;
   flex-direction: row;
-  margin-left: 200px;
-  margin-top: 150px;
+  padding-top: 64px;
+  margin: auto;
 `;
 
 const TrelloBoard = (props) => {
@@ -23,7 +22,7 @@ const TrelloBoard = (props) => {
 
   useEffect(() => {
     props.dispatch(setActiveBoard("board-0"));
-  }, []);
+  }, [props]);
 
   const onDragEnd = (result) => {
     const { destination, source, draggableId, type } = result;

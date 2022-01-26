@@ -2,6 +2,42 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 import { signInFetch, tokenCheck } from "../utils/utils.js";
+import { ReactComponent as KanDoLogo } from "../Images/Kan-Do-White.svg";
+import styled from "@emotion/styled/macro";
+
+// top: 50%;
+// left: 50 %;
+// transform: translate(-50%, -50%);
+
+const SignUpContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  width: 30vw;
+  background-color: rgba(255, 255, 255, 0.01);
+
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+`;
+
+const LogoContainer = styled("div")`
+  width: 30%;
+`;
 
 const Landing = () => {
   const [email, setEmail] = useState();
@@ -25,7 +61,10 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="centerr signup">
+    <SignUpContainer>
+      <LogoContainer>
+        <KanDoLogo />
+      </LogoContainer>
       <form onSubmit={signInHandler}>
         <h2>Login Here!</h2>
         <label for="Email">Email</label>
@@ -43,7 +82,7 @@ const Landing = () => {
           Forgotten your password? Click here to reset.
         </Link>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 
