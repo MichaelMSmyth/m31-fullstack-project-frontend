@@ -18,7 +18,7 @@ const ListContainer = styled("div")`
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   font-family: "Poppins", sans-serif;
-
+  backdrop-filter: blur(6px);
   background-color: rgba(255, 255, 255, 0.01);
 `;
 
