@@ -53,11 +53,11 @@ export const updateFetch = async (username,email) => {
     }
 }
 
-export const deleteFetch = async (email,setter,mail) => {
+export const deleteFetch = async (email,setter) => {
     try {
     await fetch(`${process.env.REACT_APP_REST_API}user/${email}`, {
-        method: "DELETE",});
-    setter(mail);
+        method: "DELETE"});
+    setter(email);
     return alert("Successfully deleted");
     } catch (error) {
     console.log(error);

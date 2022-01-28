@@ -6,7 +6,6 @@ const Settings = () => {
     const [user,setUser] = useState();
     const [username,setUsername] = useState();
     const [email,setEmail] = useState();
-    const [mail,emailSetter] = useState();
     
     const updateHandler = async (e) => {
         e.preventDefault();
@@ -23,9 +22,8 @@ const Settings = () => {
     };
 
     const deleteHandler = async () => {
-        await deleteFetch(mail, emailSetter);
+        await deleteFetch(email, setEmail);
         localStorage.clear();
-        window.location.reload(false);
     };
 
     return(

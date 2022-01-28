@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 import { signInFetch, tokenCheck } from "../utils/utils.js";
@@ -43,18 +43,22 @@ const Landing = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const navigate = useNavigate();
+
   const signInHandler = async (e) => {
     e.preventDefault();
     try {
       const returnValue = await signInFetch(email, password);
       setEmail(returnValue.email);
       setPassword(returnValue.password);
-      window.location.reload(false);
+      navigate("/home",{replace:true})
     } catch (error) {
       console.log(error);
       alert("error");
     }
   };
+
+  const history = useNavigate();
 
   useEffect(() => {
     tokenCheck(localStorage.getItem("MyToken"), setEmail);
