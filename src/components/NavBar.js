@@ -18,7 +18,6 @@ const toggler = () => {
 
 const logOutHandler = async () => {
     await logOut();
-    window.location.reload(false);
 };
 
 return (

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { signUpFetch } from "../utils/utils";
 
@@ -8,11 +8,15 @@ const SignUp = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
+  const navigate = useNavigate();
+
   const signUpHandler = async (e) => {
     e.preventDefault();
     const returnValue = await signUpFetch(username, email, password);
     setUser(returnValue.user.username);
+    navigate("/home",{replace:true})
   };
+  
   return (
     <div className="centerr signup">
       <form onSubmit={signUpHandler}>
