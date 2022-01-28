@@ -5,25 +5,32 @@ import { signInFetch, tokenCheck } from "../utils/utils.js";
 import { ReactComponent as KanDoLogo } from "../Images/Kan-Do-White.svg";
 import styled from "@emotion/styled/macro";
 
-// top: 50%;
-// left: 50 %;
-// transform: translate(-50%, -50%);
-
-const SignUpContainer = styled("div")`
+const SignUpPageContainer = styled("div")`
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-content: center;
   align-items: center;
   align-self: center;
-  width: 30vw;
-  background-color: rgba(255, 255, 255, 0.01);
+  justify-content: center;
+`;
 
+const SignUpContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  flex-basis: shrink;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.01);
   border-radius: 10px;
   backdrop-filter: blur(6px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+  padding: 32px;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   letter-spacing: 0.5px;
@@ -61,28 +68,30 @@ const Landing = () => {
   }, []);
 
   return (
-    <SignUpContainer>
-      <LogoContainer>
-        <KanDoLogo />
-      </LogoContainer>
-      <form onSubmit={signInHandler}>
-        <h2>Login Here!</h2>
-        <label for="Email">Email</label>
-        <input id="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-        <label for="password">Password</label>
-        <input id="password" type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-        <button className="btn" type="submit">
-          Sign In
-        </button>
-        <Link className="p" to="/signup">
-          {" "}
-          New user? create a free account here!{" "}
-        </Link>
-        <Link className="p" to="/reset-password">
-          Forgotten your password? Click here to reset.
-        </Link>
-      </form>
-    </SignUpContainer>
+    <SignUpPageContainer>
+      <SignUpContainer>
+        <LogoContainer>
+          <KanDoLogo />
+        </LogoContainer>
+        <form onSubmit={signInHandler}>
+          {/* <h2>Login Here!</h2> */}
+          <label for="Email">Email</label>
+          <input id="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+          <label for="password">Password</label>
+          <input id="password" type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+          <button className="btn" type="submit">
+            Sign In
+          </button>
+          <Link className="p" to="/signup">
+            {" "}
+            New user? create a free account here!{" "}
+          </Link>
+          <Link className="p" to="/reset-password">
+            Forgotten your password? Click here to reset.
+          </Link>
+        </form>
+      </SignUpContainer>
+    </SignUpPageContainer>
   );
 };
 

@@ -10,9 +10,9 @@ import TrelloCreate from "./TrelloCreate";
 
 const ListsContainer = styled("div")`
   display: flex;
+  align-self: flex-start;
   flex-direction: row;
   padding-top: 64px;
-  margin: auto;
 `;
 
 const TrelloBoard = (props) => {
